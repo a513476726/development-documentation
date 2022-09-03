@@ -11,6 +11,7 @@
     "vitepress-theme-demoblock": "^1.4.1"
   },
   "dependencies": {
-    "@types/node": "^16.11.7"
+    "@types/node": "^16.11.7",
+    "vue2-elementui-extend": "^1.0.9-beta4"
   }
 }

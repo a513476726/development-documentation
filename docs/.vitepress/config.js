@@ -20,7 +20,6 @@ module.exports = {
       //   text: '组件',
       //   link: '/components/',
       // },
-
     ],
     // 添加侧边栏
     sidebar: 'auto',
