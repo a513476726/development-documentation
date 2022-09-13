@@ -1,4 +1,5 @@
-# FilterList 筛选table组件
+# el-ex-filter-list 筛选table组件
+
 > 基于数据格式，来展示组件内容
 
 :::demo 基于 `数据结构` 来定义展示筛选项

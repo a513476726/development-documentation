@@ -1,3 +1,6 @@
+### vue2-elementui-extend
+> vue2-elementui-extend 是基于elementui 进行的二次封装。以数据驱动组件，统一风格，提高效率。
+
 ### 目录结构说明
 ### https://vuepress.vuejs.org/zh/guide/directory-structure.html
 

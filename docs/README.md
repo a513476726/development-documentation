@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: https://artice-code-1258339218.cos.ap-beijing.myqcloud.com/vuepress/element-index.png
-heroText: ElementUI Extend
+heroText: 文档
 features:
 - title: 一致性 Consistency
   details: 与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念

@@ -1,7 +1,7 @@
 module.exports = {
   base:'/',
-  title:'vue2-elementui-extend',
-  description:'vue2-elementui-extend 是基于elementui 进行的二次封装。以数据驱动组件，统一风格，提高效率。',
+  title:'文档',
+  description:'封装整理开发中可通用的组件等其他功能的文档说明网站',
   host:'0.0.0.0',
   port:'13800',
   cache:true,
@@ -15,6 +15,7 @@ module.exports = {
     nav: [
       { text: '主页', link: '/' },
       { text: '组件', link: '/elementui-extend/' },
+      { text: '服务端渲染', link: '/nuxt-ssr/' },
       { text: 'gitee源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'},
     ],
     sidebar: [
