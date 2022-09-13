@@ -1,5 +1,16 @@
+### 
+```bash
+# install
+yarn
+# dev
+yarn docs:dev
+# build
+docs:build
+```
+
+
 ### 目录结构说明
-### https://vuepress.vuejs.org/zh/guide/directory-structure.html
+<!-- ### https://vuepress.vuejs.org/zh/guide/directory-structure.html -->
 
 - docs/.vuepress: 用于存放全局的配置、组件、静态资源等。
 - docs/.vuepress/components: 该目录中的 Vue 组件将会被自动注册为全局组件。
