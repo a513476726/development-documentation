@@ -3,18 +3,14 @@
 > 按一定规则编辑好的EXCEL文件导入后，经过解析，再实现批量新增的功能。
 >
 > 功能依赖插件  "xlsx": "0.13.5"。
->
-> xlsx模版 [批量新增-数据采集模版.xlsx](./%E6%89%B9%E9%87%8F%E6%96%B0%E5%A2%9E-%E4%BF%9D%E5%8D%95%E6%A8%A1%E7%89%88.xlsx)(需要手动删除  .html)
 
 :::demo 通过 `数据结构` 来校验，整理导入的xlsx数据，输出一个符合需求数据。
-
-
 
 ```vue
 <template>
   <div class="main-section">
     <div>
-      <el-button @click="showFunction('batchImport')">批量导入</el-button>
+      <el-button type="primary" @click="showFunction('batchImport')">批量导入</el-button>
       <!-- 批量导入 -->
       <ElExBatchImport
         v-if="show.batchImport"
@@ -63,7 +59,7 @@ export default {
       },
       mixinsInitFileFormat:{
         "file":{
-          "path":'/static/batchImportFile/批量新增-保单模版.xlsx', // xlsx模版路径
+          "path":'../批量新增-保单模版.xlsx', // xlsx模版路径
           "name":'批量新增-保单模版.xlsx', // 下载时的名字
         },
         "fileFormat":[

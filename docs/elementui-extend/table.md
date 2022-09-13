@@ -1,17 +1,14 @@
-# Table 列表组件
+# el-ex-table
+> 基于数据来构建Table
 
-> 用数据结构来展示列表
+### 基本用法
 
-![Alt text](./table.png "table")
-
-
-:::demo
-
-```vue
+::: demo 基于数据来构建Table
+```html
 <template>
   <div class="main-section">
     <div class="main-section-item">
-      <ElExTable
+      <el-ex-table
         :columnRule="columnRule"
         :tableData="tableData"
         :tableHeight="'calc(100vh - 400px)'"
@@ -151,7 +148,5 @@ export default {
   },
 }
 </script>
-
 ```
-
 :::

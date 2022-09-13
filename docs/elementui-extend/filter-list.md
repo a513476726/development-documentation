@@ -1,16 +1,9 @@
 # FilterList 筛选table组件
 > 基于数据格式，来展示组件内容
-![Alt text](./filter-list.png "optional title")
-
 
 :::demo 基于 `数据结构` 来定义展示筛选项
 
-
 ```vue
-
-<template>
-  一个表格筛选组件的封装
-</template>
 <template>
   <div class="main-section">
     <div class="main-section-item">
