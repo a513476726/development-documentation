@@ -2,7 +2,7 @@
   "name": "vuepress-starter",
   "version": "0.0.1",
   "main": "index.js",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "author": "zhongzhiguo/a513476726@qq.com",
   "scripts": {
     "docs:dev": "vuepress dev docs",
