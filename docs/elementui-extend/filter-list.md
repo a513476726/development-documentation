@@ -109,3 +109,25 @@ export default {
 ```
 
 :::
+
+
+### ElExFilterList Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  | 接收参数
+|---------- |-------------- |---------- |--------------------------------  |-------- |--------
+| filterData   | 表格数据规则 | array      |                  —                |  — |  —
+| labelWidth   | 标题宽度 | string      |                  —                |  — | —
+| toQuery   | 查询按钮触发 | function      |                  —                |  — | object（查询项的key与value集合）
+| setReset   | 重置按钮触发 | function      |                  —                |  — | —
+
+### ElExFilterList filterData Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| type   | 筛选项类型 | string      |                 input,cascader,slot, slotFormItem   |  — |
+| label   | 筛选项标题 | string      |                  —                |  — |
+| model   | 数据key, toQuery 触发回调时返回的对象内的key | function      |                  —                |  — |
+| modelValue   | 数据value, toQuery 触发回调时返回的对象内的key对应的value| function      |                  —                |  — |
+| props   | Element-UI的input,cascader 的props | object      |                  —                |  — |
+| options   | 下拉数据 | array      |                  —                |  — |
+| name   | 插槽名称 | string      |                  —                |  — |

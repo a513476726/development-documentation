@@ -150,3 +150,38 @@ export default {
 </script>
 ```
 :::
+
+### ElExTable Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| columnRule   | 表格数据规则 | array      |                  —                |  — |
+| tableData   | 表格数据 | array      |                  —                |  — |
+| tableHeight   | Table 的高度，默认为自动高度。如果 height 为 number 类型，单位 px；如果 height 为 string 类型，则这个高度会设置为 Table 的 style.height 的值，Table 的高度会受控于外部样式。 | string      |                  —                |  — |
+
+
+### ColumnRule Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| type   | 数据类型 | string      |                  空 / button                |  undefined / null / ''（空） |
+| prop   | 字段名称,规定展示哪个字段的数据。 | string      |                  —                |  — |
+| label   | 标题名称 | string      |                  —                |  — |
+| width   | 当前列宽度 | string      |                  例如：'120'                |  — |
+| align   | 对齐方式 | string      |                  left/center/right                |  center |
+| fixed   | 列是否固定在左侧或者右侧，true 表示固定在左侧 | string, boolean      |                  false, true, left, right                | false |
+| buttons   | 当type='button' 时，展示此数据内的按钮集合 | array      |                  —                |  — |
+
+:::tip index, item, data 数据说明
+ index 表示数据当前位置,
+ item 表示当前数据,
+ data 是全部数据.
+:::
+### ColumnRule buttons Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  | 接收参数 |
+|---------- |-------------- |---------- |--------------------------------  |-------- |--------
+| name   | 按钮名称 | string      |                  —                |  — | — 
+| show   | 显/隐 | function      |                  —                |  — |index, item, data
+| disabled   | 禁用/启用 | function      |                  —                |  — |index, item, data
+| function   | 点击回调方法 | function      |                  —                |  — |index, item, data

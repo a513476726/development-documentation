@@ -1,7 +1,7 @@
 module.exports = {
   base:'/',
-  title:'文档',
-  description:'封装整理开发中可通用的组件等其他功能的文档说明网站',
+  title:'食安保前端文档',
+  description:'针对日常使用的公共组件进行封装和文档说明，便于多项目使用，可供不同开发人员针对相似需求，快速开展工作，减少沟通成本。',
   host:'0.0.0.0',
   port:'13800',
   cache:true,
@@ -16,11 +16,13 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
-      { text: 'gitee源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'},
+      { text: '代码风格指南', link: '/code-style/' },
+      { text: '江泰中台', link: '/jiangtai/' },
+      { text: 'gitee源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
     ],
     sidebar: [
       {
-        title: 'ElementUI组件扩展',   // 必要的
+        title: 'vue2-elementui-extend',   // 必要的
         path: '',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
         collapsable: false, // 可选的, 默认值是 true,
         sidebarDepth: 1,    // 可选的, 默认值是 1
@@ -30,6 +32,7 @@ module.exports = {
           ['/elementui-extend/filter-list.md','FilterList  表格筛选'],
           ['/elementui-extend/batch-import.md','BatchImport  批量导入'],
           ['/elementui-extend/file-export.md','FileExport  文件导出'],
+          ['/elementui-extend/file-export2.md','FileExport  文件导出2'],
         ]
       },
       {
@@ -47,8 +50,10 @@ module.exports = {
     resolve: {
       alias: {
         'core-js/library/fn':'core-js/features',
-        './cptable': 'var cptable' // xlsx-style
       }
+    },
+    externals:{
+      './cptable': 'var cptable'
     },
     node: {
       global: true,

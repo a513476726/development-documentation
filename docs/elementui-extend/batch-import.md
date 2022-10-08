@@ -1,10 +1,10 @@
 # el-ex-batch-import 批量导入
 
-> 按一定规则编辑好的EXCEL文件导入后，经过解析，再实现批量新增的功能。
+> 按一定规则编辑好的EXCEL文件导入后，经过解析，校验，实现批量新增的功能。
 >
-> 功能依赖插件  "xlsx": "0.13.5"。
+> todo: 因第一版开发后上线前需求调整，导致设计有些混乱，后续版本会纠正完善。
 
-:::demo 通过 `数据结构` 来校验，整理导入的xlsx数据，输出一个符合需求数据。
+:::demo 通过 `数据结构` 来校验，整理导入的xlsx数据，输出一个符合需求的数据数组。
 
 ```vue
 <template>
@@ -566,4 +566,88 @@ export default {
 </script>
 ```
 
+:::
+
+
+
+
+### ElExBatchImport Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| templateName   | 模版文件名称 | string      |                  —                |  — |
+| templatePath   | 模版文件路径 | string      |                  —                |  — |
+| fileFormat   | 解析规则 | function      |                  —                |  — |
+| fileSuccess   | 解析校验成功后回调 | function      |                  —                |  — |
+| close   | 取消弹窗回调 | function      |                  —                |  — |
+
+
+### ElExBatchImport fileFormat Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| type   | 规则类型 | string      |                 空,select,cascader, |  — | 空
+| fieldZh   | 标题名称 | string      |                  —                |  — |
+| fieldCh   | 字段名称 | string      |                  —                |  — |
+| rule   | 数据校验规则 | array      |                  —                |  — |
+| format   | 非默认类型时规则 | object      |                  —                |  — |
+| level   | cascader 类型时, 用来标记每一级的数据标题名称 | array      |                  —                |  — |
+
+
+### ElExBatchImport rule Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| require   | 是否必填 | string      |                 "true","false",空 |  — | 空
+| message   | 不满足校验提示 | string      |                  —                |  — |
+| validateName   | 校验的字段名称 | string      |                  —                |  — |
+| validate   | 正则数据校验 | RegExp      |                  —                |  — |
+| length   | 数据长度校验 | array      |                  例如：[1,10] 1-10 位            |  — |
+
+
+### ElExBatchImport format Attributes
+
+| 参数      | 说明          | 类型      | 可选值                           | 默认值  |
+|---------- |-------------- |---------- |--------------------------------  |-------- |
+| name   | 存储label数据的字段名 | string      |              —        |  — | 空
+| code   | 存储value数据的字段名 | string      |                  —                |  — |
+| props   | options数组内对应的label与value字段名 | object      |                  —                |  — |
+| options   | 数据源，用于从数据源中筛选出想要的数据 | array      |                  —                |  — |
+
+:::tip 假设前提有一条数据,以此数据为场景更好理解 format 规则
+``` javascript
+[
+  {
+    "label":"北京市",
+    "value":"110000000000",
+    "children":[
+      {
+        "label":"市辖区",
+        "value":"110100000000",
+        "children":[
+          {
+            "label":"东城区",
+            "value":"110101000000"
+          },
+          {
+            "label":"西城区",
+            "value":"110102000000"
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+> name 通过props指定的label拿到数据，并自定义一个字段名称用于存储。
+>
+> code 通过props指定的value拿到数据，并自定义一个字段名称用于存储。
+>
+> props 规定以 options 为数据源, 从哪个字段拿对应的 label，value。 如果用上述模拟数据 应是 "props":{ "label":"label","value":"value"}
+>
+> options 就是数据源，这里可以比作我们上面假设的数据
+:::
+
+:::tip 特别注意！
+options的数据需要提前放进来
 :::
