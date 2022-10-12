@@ -7,6 +7,7 @@ module.exports = {
   cache:true,
   dest:'',
   head:[
+    [ 'meta', { name:"baidu-site-verification",content:"code-RxfGvV81LP" }],
     [
       'script', {}, `
       var _hmt = _hmt || [];
