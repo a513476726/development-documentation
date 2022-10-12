@@ -1,12 +1,17 @@
 module.exports = {
   base:'/',
   title:'食安保前端文档',
+  keywords:'',
   description:'针对日常使用的公共组件进行封装和文档说明，便于多项目使用，可供不同开发人员针对相似需求，快速开展工作，减少沟通成本。',
   host:'0.0.0.0',
   port:'13800',
   cache:true,
   dest:'',
   head:[
+    [
+      'link', { rel: 'icon', href: '/docs/.vuepress/public/favicon.ico' }
+    ],
+    [ 'meta', { name:"keywords",content:"vue2-elementui-extend,el-ex,el-ex-table,el-ex-filter-list,el-ex-batch-import,el-ex-file-export,食安保前端文档,批量导入,批量导出,elementui二次封装"}],
     [ 'meta', { name:"baidu-site-verification",content:"code-RxfGvV81LP" }],
     [
       'script', {}, `
