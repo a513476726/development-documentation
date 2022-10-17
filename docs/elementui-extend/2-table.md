@@ -1,9 +1,18 @@
-# el-ex-table
-> 基于数据来构建Table
+---
+title: Table 表格
+categories:
+      - elementui-extend
+tags:
+ - elementui-extend
+---
 
-### 基本用法
+### 快速导航
+<TOC />
+
+### 实例展示
 
 ::: demo 基于数据来构建Table
+
 ```html
 <template>
   <div class="main-section">

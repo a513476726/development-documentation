@@ -1,7 +1,15 @@
-# el-ex-file-export excel导出 
+---
+title: FileExport Excel导出
+categories:
+      - elementui-extend
+tags:
+ - elementui-extend
+---
 
+### 快速导航
+<TOC />
 
-### 基础导出数据
+### 实例展示
 :::demo 基础导出数据
 
 ```vue
@@ -17,6 +25,7 @@
 </template>
 <script>
 export default {
+  name:'ElExFileExportDemo',
   data(){
     return {
       tableData:{

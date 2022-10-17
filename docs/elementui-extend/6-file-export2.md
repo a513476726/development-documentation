@@ -1,6 +1,16 @@
-# el-ex-file-export excel导出 
+---
+title: FileExport Excel导出(双层标题)
+categories:
+      - elementui-extend
+tags:
+ - elementui-extend
+---
 
-### 双层标题数据导出
+### 快速导航
+<TOC />
+
+### 实例展示
+
 :::demo 双层标题数据导出
 
 ```vue
@@ -19,6 +29,7 @@
 </template>
 <script>
 export default {
+  name:'ElExFileExportDemo2',
   data(){
     return {
       multilineTableData:{

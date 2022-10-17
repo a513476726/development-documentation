@@ -1,7 +1,16 @@
-# el-ex-filter-list 筛选table组件
+---
+title: FilterList 筛选表格
+categories:
+      - elementui-extend
+tags:
+ - elementui-extend
+---
 
-> 基于数据格式，来展示组件内容
+### 快速导航
+<TOC />
 
+
+### 实例展示
 :::demo 基于 `数据结构` 来定义展示筛选项
 
 ```vue

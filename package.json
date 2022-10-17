@@ -13,12 +13,13 @@
     "@vuepress/plugin-active-header-links": "1.9.7",
     "@vuepress/plugin-back-to-top": "1.9.7",
     "vuepress": "1.9.7",
-    "vuepress-plugin-code-copy": "1.0.6"
+    "vuepress-plugin-code-copy": "1.0.6",
+    "vuepress-plugin-table-of-contents": "^1.1.7",
+    "vuepress-plugin-demo-container": "0.2.0"
   },
   "dependencies": {
     "element-ui": "2.15.6",
     "vue2-elementui-extend": "1.1.5",
-    "vuepress-plugin-demo-container": "0.2.0",
     "sass": "1.32.5",
     "sass-loader": "10.1.1",
     "vue-papa-parse": "3.1.0"

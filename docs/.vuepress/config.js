@@ -1,3 +1,4 @@
+const { getChildren } = require("./vuepress-sidebar-auto.js")
 module.exports = {
   base:'/',
   title:'食安保前端文档',
@@ -36,34 +37,49 @@ module.exports = {
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
       { text: '代码风格指南', link: '/code-style/' },
-      { text: '江泰中台', link: '/jiangtai/' },
-      { text: 'gitee源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
+      { text: '后端架构介绍', link: '/jiangtai/'},
+      { text: '更多',
+        items: [
+        { text: 'vue源码学习', link: 'https://ustbhuangyi.github.io/vue-analysis/v2/prepare/'},
+        { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
+      ]},
     ],
-    sidebar: [
-      {
-        title: 'vue2-elementui-extend',   // 必要的
-        path: '',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
-        children: [
-          ['/elementui-extend/quick-start.md','快速开始'],
-          ['/elementui-extend/table.md','Table  表格'],
-          ['/elementui-extend/filter-list.md','FilterList  表格筛选'],
-          ['/elementui-extend/batch-import.md','BatchImport  批量导入'],
-          ['/elementui-extend/file-export.md','FileExport  文件导出'],
-          ['/elementui-extend/file-export2.md','FileExport  文件导出2'],
-        ]
-      },
-      {
-        title: 'ElementUI例子',   // 必要的
-        path: '',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
-        collapsable: false, // 可选的, 默认值是 true,
-        sidebarDepth: 1,    // 可选的, 默认值是 1
-        children: [
-          ['/elementui-extend/demo/form.md','Form'],
-        ]
-      },
-    ]
+    sidebar:{
+      '/elementui-extend/': [
+        // '1-quick-start.md','batch-import.md','file-export.md'
+          {
+              title: '组件',
+              collapsable: false,//来让一个组永远都是展开状态
+              sidebarDepth: 2,
+              children: getChildren('./docs','elementui-extend')
+          }
+      ],
+      '/nuxt-ssr/': [
+        {
+            title: '服务端渲染',
+            collapsable: false,//来让一个组永远都是展开状态
+            sidebarDepth: 2,
+            children: getChildren('./docs','nuxt-ssr')
+        }
+      ],
+      '/code-style/': [
+        {
+            title: '代码风格指南',
+            collapsable: false,//来让一个组永远都是展开状态
+            sidebarDepth: 2,
+            children: getChildren('./docs','code-style')
+        }
+      ],
+      '/jiangtai/': [
+        {
+            title: '后端架构介绍',
+            collapsable: false,//来让一个组永远都是展开状态
+            sidebarDepth: 2,
+            children: getChildren('./docs','jiangtai')
+        }
+      ],
+      '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
+    },
   },
   configureWebpack: {
     resolve: {
@@ -80,11 +96,22 @@ module.exports = {
     },
   },
   markdown: {
+    extractHeaders: ['h2', 'h3', 'h4', 'h5' ],
+    externalLinks:true,
     // lineNumbers: true // 显示代码行数
   },
   plugins: [
     // ['vuepress-plugin-code-copy', true],
     '@vuepress/back-to-top',
     'demo-container',
+    'vuepress-plugin-table-of-contents',
+    [
+      '@vuepress/active-header-links',
+      {
+        // 页面滚动时自动激活侧边栏链接的插件配置
+        sidebarLinkSelector: '.sidebar-link',
+        headerAnchorSelector: '.header-anchor',
+      },
+    ],
   ]
 }

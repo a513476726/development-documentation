@@ -1,10 +1,24 @@
-# el-ex-batch-import 批量导入
+---
+title: BatchImport 批量导入
+categories:
+      - elementui-extend
+tags:
+ - elementui-extend
+---
 
-> 按一定规则编辑好的EXCEL文件导入后，经过解析，校验，实现批量新增的功能。
->
-> todo: 因第一版开发后上线前需求调整，导致设计有些混乱，后续版本会纠正完善。
 
-:::demo 通过 `数据结构` 来校验，整理导入的xlsx数据，输出一个符合需求的数据数组。
+### 快速导航
+<TOC />
+
+### 实例展示
+
+
+::: warning 注意事项!
+todo: 因第一版开发后上线前需求调整，导致设计有些混乱，后续版本会纠正完善。
+:::
+
+:::demo 按一定`规则`将编辑好的`EXCEL文件`导入后，经过`解析`，`校验`，实现批量新增数据的功能。
+
 
 ```vue
 <template>
@@ -582,6 +596,9 @@ export default {
 | close   | 取消弹窗回调 | function      |                  —                |  — |
 
 
+
+
+
 ### ElExBatchImport fileFormat Attributes
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -592,6 +609,9 @@ export default {
 | rule   | 数据校验规则 | array      |                  —                |  — |
 | format   | 非默认类型时规则 | object      |                  —                |  — |
 | level   | cascader 类型时, 用来标记每一级的数据标题名称 | array      |                  —                |  — |
+
+
+
 
 
 ### ElExBatchImport rule Attributes
@@ -605,6 +625,9 @@ export default {
 | length   | 数据长度校验 | array      |                  例如：[1,10] 1-10 位            |  — |
 
 
+
+
+
 ### ElExBatchImport format Attributes
 
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -615,6 +638,7 @@ export default {
 | options   | 数据源，用于从数据源中筛选出想要的数据 | array      |                  —                |  — |
 
 :::tip 假设前提有一条数据,以此数据为场景更好理解 format 规则
+
 ``` javascript
 [
   {
