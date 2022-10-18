@@ -36,13 +36,13 @@ module.exports = {
       { text: '主页', link: '/' },
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
+      { text: '开发工具', link:'/tools/'},
       { text: '代码风格指南', link: '/code-style/' },
       { text: '后端架构介绍', link: '/jiangtai/'},
-      { text: '更多',
-        items: [
-        { text: 'vue源码学习', link: 'https://ustbhuangyi.github.io/vue-analysis/v2/prepare/'},
-        { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
-      ]},
+      // { text: '更多',
+      //   items: [
+      //   { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
+      // ]},
     ],
     sidebar:{
       '/elementui-extend/': [
@@ -78,6 +78,12 @@ module.exports = {
             children: getChildren('./docs','jiangtai')
         }
       ],
+      '/tools/': [{
+        title: '开发工具',
+        collapsable: false,//来让一个组永远都是展开状态
+        sidebarDepth: 2,
+        children: getChildren('./docs','tools')
+      }],
       '/': [''] //不能放在数组第一个，否则会导致右侧栏无法使用
     },
   },

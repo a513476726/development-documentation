@@ -15,3 +15,6 @@
 - [el-ex-batch-import](./4-batch-import.md)
 - [el-ex-file-export](./5-file-export.md)
 - [el-ex-file-export （双层标题）](./6-file-export2.md)
+
+### 组件源码
+- [vue2-elementui-extend gitee地址](https://gitee.com/zhongzhiguo2020/vue2-elementui-extend)
