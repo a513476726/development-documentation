@@ -39,6 +39,7 @@ module.exports = {
       { text: '开发工具', link:'/tools/'},
       { text: '代码风格指南', link: '/code-style/' },
       { text: '后端架构介绍', link: '/jiangtai/'},
+      { text: '文档源码', link:'https://github.com/a513476726/development-documentation/tree/main'}
       // { text: '更多',
       //   items: [
       //   { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}

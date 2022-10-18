@@ -5,7 +5,7 @@ yarn
 # dev
 yarn docs:dev
 # build
-docs:build
+yarn docs:build
 ```
 
 
