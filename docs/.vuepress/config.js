@@ -34,16 +34,18 @@ module.exports = {
     lastUpdated: 'updated', // string | boolean
     nav: [
       { text: '主页', link: '/' },
+      { text: '代码风格指南', link: '/code-style/' },
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
-      { text: '开发工具', link:'/tools/'},
-      { text: '代码风格指南', link: '/code-style/' },
-      { text: '后端架构介绍', link: '/jiangtai/'},
-      { text: '文档源码', link:'https://github.com/a513476726/development-documentation/tree/main'}
-      // { text: '更多',
-      //   items: [
-      //   { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
-      // ]},
+      { text: 'vue2升vue3指南', link: '/vue2-to-vue3/'},
+      { text: '其他',
+        items: [
+          { text: '开发工具', link:'/tools/'},
+          { text: '后端架构介绍', link: '/jiangtai/'},
+          // { text: '文档源码', link:'https://github.com/a513476726/development-documentation/tree/main'}
+          // { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
+        ]
+      },
     ],
     sidebar:{
       '/elementui-extend/': [
