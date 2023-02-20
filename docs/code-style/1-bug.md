@@ -6,9 +6,9 @@ tags:
  - code-style
 ---
 
-## 项目中的问题：
+## 项目中的问题
 
-- 样式相关：
+### 样式相关
 
 ``` html
 
@@ -43,7 +43,7 @@ tags:
 
 ```
 
-- 方法命名 & 常量命名
+### 方法命名 & 常量命名
 
 ``` html
 
@@ -96,10 +96,9 @@ let isGirl = false
 </script>
 ```
 
-- 索赔管理后台
+### 组件声明
 
 ```javascript
-// 发现的问题 
 <script>
 export default {
   components: {
@@ -140,9 +139,11 @@ export default {
   }
 }
 </script>
+```
+### 逻辑判断
 
+```javascript
 
-// 发现的问题 2
 <script>
 // if 判断
 if (this.fileContent) {
@@ -181,7 +182,7 @@ if (!(fileType === 'xlsx' || fileType === 'xls')) {
 
 ```
 
-- 组件存放规范
+### 组件存放规范
 
 ```js
 // 组件文件位置
@@ -199,7 +200,7 @@ if (!(fileType === 'xlsx' || fileType === 'xls')) {
                └── list.vue  // 保险方案列表
 ```
 
-- 工具类js / 公共js
+### 工具类js / 公共js
 
 ```js
 // js 存放
@@ -212,7 +213,7 @@ if (!(fileType === 'xlsx' || fileType === 'xls')) {
 ```
 
 
-- Vue计算属性
+### Vue计算属性
 
 ```js
 // 尽量使用计算属性代替方法进行计算
@@ -240,7 +241,7 @@ export default {
 
 ```
 
-- 合并代码注意事项。
+### 合并代码注意事项。
 
 ```js
 // soucetree 默认填写的 说明不要删除自己写，可以体现冲突的地方，便于排查问题。
