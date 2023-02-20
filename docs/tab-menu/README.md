@@ -24,6 +24,9 @@ title: 菜单标签
 ![菜单标签页展示](../.vuepress/public/images/menu-tab.png)
 <!-- ![菜单标签页展示](../doc/.vuepress/public/images/menu-tab.png.png) -->
 
+## 缺点
+> - 现在：重新加载时，需要切换路由再重新打开。达到重新加载的效果。
+> - 希望：直接重新重置当前标签内的路由页内容。
 
 ## 前端框架
 
