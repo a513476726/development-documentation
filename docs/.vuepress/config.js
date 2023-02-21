@@ -12,7 +12,7 @@ module.exports = {
     [
       'link', { rel: 'icon', href: './favicon.ico' }
     ],
-    [ 'meta', { name:"keywords",content:"vue2-elementui-extend,el-ex,el-ex-table,el-ex-filter-list,el-ex-batch-import,el-ex-file-export,食安保前端文档,批量导入,批量导出,elementui二次封装"}],
+    [ 'meta', { name:"keywords",content:"vue2-elementui-extend,el-ex,el-ex-table,el-ex-filter-list,el-ex-batch-import,el-ex-file-export,前端文档,批量导入,批量导出,elementui二次封装"}],
     [ 'meta', { name:"baidu-site-verification",content:"code-RxfGvV81LP" }],
     [
       'script', {}, `
