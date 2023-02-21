@@ -1,7 +1,7 @@
 const { getChildren } = require("./vuepress-sidebar-auto.js")
 module.exports = {
   base:'/',
-  title:'食安保前端文档',
+  title:'前端文档',
   keywords:'',
   description:'针对日常使用的公共组件进行封装和文档说明，便于多项目使用，可供不同开发人员针对相似需求，快速开展工作，减少沟通成本。',
   host:'0.0.0.0',
@@ -37,12 +37,12 @@ module.exports = {
       { text: '代码风格指南', link: '/code-style/' },
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
-      { text: 'vue2升vue3指南', link: '/vue2-to-vue3/'},
+      { text: 'vue2升vue3指南', link: '/vue2-to-vue3/1-step'},
       { text: '其他',
         items: [
           { text: '开发工具', link:'/tools/'},
           { text: '后端架构介绍', link: '/jiangtai/'},
-          { text: '菜单标签', link: '/tab-menu/' }
+          { text: '菜单标签', link: '/tab-menu/1-main' }
           // { text: '文档源码', link:'https://github.com/a513476726/development-documentation/tree/main'}
           // { text: 'vue2-elementui-extend源码', link: 'https://gitee.com/zhongzhiguo2020/vue2-elementui-extend'}
         ]
@@ -80,6 +80,22 @@ module.exports = {
             collapsable: false,//来让一个组永远都是展开状态
             sidebarDepth: 2,
             children: getChildren('./docs','jiangtai')
+        }
+      ],
+      '/vue2-to-vue3/': [
+        {
+            title: 'vue2升vue3指南',
+            collapsable: false,//来让一个组永远都是展开状态
+            sidebarDepth: 2,
+            children: getChildren('./docs','vue2-to-vue3')
+        }
+      ],
+      '/tab-menu/': [
+        {
+            title: '菜单标签',
+            collapsable: false,//来让一个组永远都是展开状态
+            sidebarDepth: 2,
+            children: getChildren('./docs','tab-menu')
         }
       ],
       '/tools/': [{
