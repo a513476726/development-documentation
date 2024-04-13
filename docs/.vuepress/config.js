@@ -38,6 +38,12 @@ module.exports = {
       { text: '组件', link: '/elementui-extend/' },
       { text: '服务端渲染', link: '/nuxt-ssr/' },
       { text: 'vue2升vue3指南', link: '/vue2-to-vue3/1-step'},
+      { text: '后端开发',
+        items: [
+          { text: 'sql语句', link:'/sql/'},
+          // { text: '其他', link:'/sql/'},
+        ]
+      },
       { text: '其他',
         items: [
           { text: '开发工具', link:'/tools/'},
