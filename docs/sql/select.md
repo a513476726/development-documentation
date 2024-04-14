@@ -20,7 +20,7 @@ tags:
 ### 创建一个客户列表
 
 
-```
+``` sql
 CREATE TABLE `sys_client` (
   `id` bigint NOT NULL AUTO_INCREMENT COMMENT '客户id',
   `name` varchar(20) NOT NULL COMMENT '客户名称',
@@ -145,8 +145,8 @@ VALUES (<值列表>);
 
 ### 1.1.2 插入单条数据示例
 
-```
-sqlINSERT INTO ruoyi_zzg.sys_client
+``` sql
+INSERT INTO ruoyi_zzg.sys_client
 (
     name,
     code,
@@ -182,8 +182,8 @@ VALUES
 
 在同一 `INSERT INTO` 语句中插入多条数据，只需在 `VALUES` 后面用逗号分隔多个值列表：
 
-```
-sqlINSERT INTO ruoyi_zzg.sys_client
+``` sql
+INSERT INTO ruoyi_zzg.sys_client
 (
     name,
     code,
