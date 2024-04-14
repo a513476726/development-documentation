@@ -231,8 +231,8 @@ VALUES
 
 当需要插入所有表字段的数据时，可以省略 `<字段列表>`，直接写出 `VALUES` 子句：
 
-```
-sqlINSERT INTO ruoyi_zzg.sys_client
+```sql
+INSERT INTO ruoyi_zzg.sys_client
 VALUES
 (
     '王五',
@@ -252,8 +252,8 @@ VALUES
 
 有时可能只需要插入部分字段的数据，此时需要在 `<字段列表>` 中明确指定需要插入的字段名：
 
-```
-sqlINSERT INTO ruoyi_zzg.sys_client (name, code, sex)
+```sql
+INSERT INTO ruoyi_zzg.sys_client (name, code, sex)
 VALUES
 (
     '赵六',
@@ -268,8 +268,8 @@ VALUES
 
 可以通过 `INSERT INTO ... SELECT` 语句将查询结果直接插入到目标表中。这在数据迁移、合并或生成新记录时非常有用：
 
-```
-sqlINSERT INTO ruoyi_zzg.sys_client (name, code, sex, type, phone, email, create_time, update_time)
+``` sql
+INSERT INTO ruoyi_zzg.sys_client (name, code, sex, type, phone, email, create_time, update_time)
 SELECT
     '临时客户' AS name,
     CONCAT('TC', LPAD(seq, 3, '0')) AS code,
