@@ -4,8 +4,8 @@ module.exports = {
   title:'前端文档',
   keywords:'',
   description:'针对日常使用的公共组件进行封装和文档说明，便于多项目使用，可供不同开发人员针对相似需求，快速开展工作，减少沟通成本。',
-  host:'0.0.0.0',
-  port:'13800',
+  host:'localhost',
+  port:'13801',
   cache:true,
   dest:'',
   head:[
